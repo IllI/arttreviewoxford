@@ -8,14 +8,34 @@
         <title data-react-helmet="true">Art Review Oxford</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-        <script type="application/ld+json">
-            {
-                "@context": "http://schema.org",
-                "@type": "WebPage",
-                "name": "Art Review Oxford",
-                "description": "A print triannual contemporary art journal based at the University of Oxford"
-            }
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPJK1S3ENF"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){
+            dataLayer.push(arguments);
+            console.log('gtag call:', arguments); // Debug line to see all gtag calls
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-ZPJK1S3ENF', {
+            'debug_mode': true,  // Enable debug mode
+            'send_page_view': true
+          });
+        
+          // Enhanced PDF tracking function with debug
+          function trackPDFView(issueNumber) {
+    gtag('event', 'file_download', {
+      'event_category': 'PDF',
+      'item_name': `Issue ${issueNumber}`,     // Added for tracking specific issues
+      'item_id': `ARO-${issueNumber}`,         // Added for unique identification
+      'content_type': 'PDF',
+      'file_name': `ARO-${issueNumber}.pdf`
+    });
+    return true;
+  }
+
+
         </script>
+
     </head>
     <body>
         <div class="header">
@@ -29,7 +49,160 @@
         <div class="main-container">
             <div class="issues">
                 <div class="issue">
-                    <a target="_blank" href="https://drive.google.com/file/d/1kj358Fq_C5RA4r7r1DsFyxgj1CrvLcvU/view?usp=sharing">
+                    <a target="_blank" href="issues/ARO10.pdf" 
+                       onclick="trackPDFView('10');">
+                        <div class="issue-title">
+                           Issue 10
+                         </div>
+                        <div class="issue-preview">
+                            <img src="images/article10.png" />
+                        </div>
+                        <div class="issue-contributors">
+                            <ul class="author-list">
+                                <li>
+                                    Ale Nodarse Jammal
+                                </li>
+                                <li>
+                                    Youxi Chen
+                                </li>
+                                <li>
+                                    Joni Brown
+                                </li>
+                                <li>
+                                    Tyuki Imamura
+                                </li>
+                                <li>
+                                    Fei Geng
+                                </li>
+                                <li>
+                                    Ahmet Öğüt
+                                </li>
+                                <li>
+                                    Jo-Lene Ong
+                                </li>
+                                <li>
+                                    Minji Chun
+                                </li>
+                                <li>
+                                    Pongsakorn Yananissorn
+                                </li>
+                                <li>
+                                    Patrycja Wojciechowska
+                                </li>
+                                <li>
+                                    Shayna Fonseka
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+                <div class="issue">
+                    <a target="_blank" href="issues/ARO9.pdf" 
+                       onclick="trackPDFView('09');">
+                        <div class="issue-title">
+                           Issue 09
+                         </div>
+                        <div class="issue-preview">
+                            <img src="images/article9.png" />
+                        </div>
+                        <div class="issue-contributors">
+                            <ul class="author-list">
+                                <li>
+                                    Emily Jin
+                                </li>
+                                <li>
+                                    Sharon Liu
+                                </li>
+                                <li>
+                                    Salvarpatti Ponnudurai
+                                </li>
+                                <li>
+                                    sui-hin mak
+                                </li>
+                                <li>
+                                    Jolanda Wessel
+                                </li>
+                                <li>
+                                    Liv Stevenson
+                                </li>
+                                <li>
+                                    Amaia Salazar
+                                </li>
+                                <li>
+                                    Pamela Wong
+                                </li>
+                                <li>
+                                    Minji Chun
+                                </li>
+                                <li>
+                                    Jason Waite
+                                </li>   
+                                <li>
+                                    Emilia Osztafi
+                                </li>  
+                            </ul>
+                        </div>
+                    </a>
+                    
+                    
+                </div> 
+                <div class="issue">
+                    <a target="_blank" href="issues/ARO 8.pdf"
+                       onclick="trackPDFView('08'); return true;">
+                        <div class="issue-title">
+                           Issue 08
+                         </div>
+                        <div class="issue-preview">
+                            <img src="images/article8.jpg" />
+                        </div>
+                        <div class="issue-contributors">
+                            <ul class="author-list">
+                                <li>
+                                    Harmanpreet Randhawa
+                                </li>
+                                <li>
+                                    Joe Boyle
+                                </li>
+                                <li>
+                                    Regina Kong
+                                </li>
+                                <li>
+                                    Rachel Seah
+                                </li>
+                                <li>
+                                    Isabel Oakes
+                                </li>
+                                <li>
+                                    Claudia Ford
+                                </li>
+                                <li>
+                                    Maya Adams
+                                </li>
+                                <li>
+                                    Dmytro Chepurnyi
+                                </li>
+                                <li>
+                                    Mia Yu
+                                </li>
+                                <li>
+                                    Tatjana Söding
+                                </li>   
+                                <li>
+                                    Xinyue Liu
+                                </li>         
+                                <li>
+                                    Miriam Austin
+                                </li>
+
+                            </ul>
+                        </div>
+                    </a>
+                    
+                    
+                </div> 
+                <div class="issue">
+                    <a target="_blank" href="issues/ARO 7.pdf"
+                       onclick="trackPDFView('07'); return true;">
                         <div class="issue-title">
                            Issue 07
                          </div>
@@ -81,7 +254,8 @@
                     
                 </div> 
                 <div class="issue">
-                    <a target="_blank" href="https://drive.google.com/file/d/1HPWdg-VP_Csa9ophYDGu3hKNFjR-1DHX/">
+                    <a target="_blank" href="issues/ARO6.pdf"
+                       onclick="trackPDFView('06'); return true;">
                         <div class="issue-title">
                            Issue 06
                          </div>
@@ -133,7 +307,8 @@
                     
                 </div> 
                 <div class="issue">
-                    <a target="_blank" href="https://drive.google.com/file/d/10tIEhLHtoWADQ3nMGwJxVNV21KCFLDgU/view?usp=share_link">
+                    <a target="_blank" href="issues/ARO Autumn 2022.pdf"
+                       onclick="trackPDFView('05'); return true;">
                         <div class="issue-title">
                         Issue 05
                         </div>
@@ -179,7 +354,8 @@
                     
                 </div> 
                 <div class="issue">
-                    <a href="https://drive.google.com/file/d/1-oXiwikp7p5_-t2d44BnsSVjF02HS5Ez/view?usp=share_link" target="_blank">
+                    <a href="issues/ARO Spring 2022.pdf" target="_blank"
+                       onclick="trackPDFView('04'); return true;">
                         <div class="issue-title">
                             Issue 04
                         </div>
@@ -221,7 +397,8 @@
                         
                 </div> 
                 <div class="issue">
-                    <a target=”_blank” href="https://files.cargocollective.com/725053/ARO3-All.pdf">
+                    <a target=”_blank” href="issues/ARO3-All.pdf"
+                       onclick="trackPDFView('03'); return true;">
                         <div class="issue-title">
                             Issue 03
                         </div>
@@ -280,7 +457,8 @@
                     </a>
                 </div>   
                 <div class="issue">
-                    <a target=”_blank” href="https://files.cargocollective.com/725053/ARO2-All.pdf">
+                    <a target=”_blank” href="issues/ARO2-All.pdf"
+                       onclick="trackPDFView('02'); return true;">
                         <div class="issue-title">
                             Issue 02
                         </div>
@@ -296,7 +474,7 @@
                                     Michael Kurtz
                                 </li>
                                 <li>
-                                    Harry Coday with Simon Preston
+                                    Harry Coday with<br/> Simon Preston
                                 </li>
                                 <li>
                                     Josiah McNeil
@@ -326,7 +504,8 @@
                 </div>    
                  
                 <div class="issue">
-                    <a target=”_blank” href="https://files.cargocollective.com/725053/Art-Review-Oxford-Issue-1.pdf">
+                    <a target=”_blank” href="issues/Art-Review-Oxford-Issue-1.pdf"
+                       onclick="trackPDFView('01'); return true;">
                         <div class="issue-title">
                             Issue 01
                         </div>
