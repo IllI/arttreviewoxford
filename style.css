@@ -1,0 +1,58 @@
+body{
+    background-color: #f2f2f2;
+    width:100%;
+    letter-spacing: 3px;
+    
+}
+.header{
+    text-align: center;
+    padding: 25px;
+    line-height: 2;
+    color: #b0b3d5;
+}
+.header .title{
+    flex:content;
+    text-transform: uppercase;
+}
+.main-container .issues{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.main-container .issues .issue{
+    margin: 15px 20px;
+    max-width: 225px;
+}
+.main-container .issues .issue a{
+    text-decoration: none;
+}
+.main-container .issues .issue .issue-title{
+    color: #b0b3d5;
+    text-transform: uppercase;
+}
+.main-container .issues .issue .issue-preview{
+    margin-top: 15px;
+}
+.main-container .issues .issue .issue-preview img {
+    width: 158px;
+    height: 220px;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 2px solid #0f0f0f;
+    object-fit: contain;
+}
+.next-issue li:nth-child(1){
+    padding-bottom:25px;
+}
+.main-container .issues .issue .issue-contributors{
+    line-height: 1.5;
+    color: #767676;
+}
+.main-container .issues .issue ul{
+    list-style-type: none;
+    line-height: 1.5;
+    padding: 0;
+}
+.main-container .issues .issue a ul li{
+    text-wrap: nowrap;
+}
